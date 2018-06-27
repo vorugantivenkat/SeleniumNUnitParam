@@ -18,7 +18,7 @@ namespace SeleniumNUnitParam
             Driver.Navigate().GoToUrl("http://www.google.com");
             Driver.FindElement(By.Name("q")).SendKeys("Selenium");
             System.Threading.Thread.Sleep(5000);
-            Driver.FindElement(By.Type("submit")).Click();
+            Driver.FindElement(By.xpath("//*[@id='tsf']/div[2]/div[3]/center/input[1]")).Click();
             Assert.That(Driver.PageSource.Contains("Selenium"), Is.EqualTo(true),
                                             "The text selenium doest not exist");
 
